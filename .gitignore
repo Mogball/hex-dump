@@ -1,2 +1,6 @@
 .idea/
 cmake-build-debug/
+bin/
+pkg/
+src/golang.org/
+src/github.com/

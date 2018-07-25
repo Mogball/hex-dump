@@ -6,11 +6,11 @@
 
 int main(void) {
     FILE *file = fopen("mock.txt", "w");
-    static unsigned char buf[1 << 18];
+    static unsigned char buf[1 << 16];
     int i = 0;
     int j = 0;
-    for (; i < 64; ++i) {
-        for (j = 0; j < (1 << 18); ++j) {
+    for (; i < 4; ++i) {
+        for (j = 0; j < (1 << 16); ++j) {
             buf[j] = (unsigned char) (rand() % 256);
         }
         fwrite(buf, 1, 1 << 18, file);

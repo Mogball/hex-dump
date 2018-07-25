@@ -218,7 +218,7 @@ void heavy_dump(FILE *fd, FILE *out) {
         data = file->data;
         seek = (size_t) file->seek;
         for (i = 0; i < seek; ++i) {
-            if (i % 64 == 0) {
+            if (i % 1024 == 0) {
                 s_buffer[j++] = '\n';
             }
             s_buffer[j++] = hex_chr[data[i] / 16];
