@@ -171,7 +171,6 @@ void ascii_dump(FILE *fd, FILE *out) {
     }
 }
 
-
 static char hex_chr[16] = {
     '0', '1', '2', '3',
     '4', '5', '6', '7',
@@ -179,7 +178,7 @@ static char hex_chr[16] = {
     'c', 'd', 'e', 'f'
 };
 
-void hex_dump(FILE *fd, FILE *out) {
+decl void hex_dump(FILE *fd, FILE *out) {
     mem_file *file = (mem_file *) fd;
 
     byte *data = NULL;
@@ -207,7 +206,7 @@ void hex_dump(FILE *fd, FILE *out) {
     }
 }
 
-void heavy_dump(FILE *fd, FILE *out) {
+decl void heavy_dump(FILE *fd, FILE *out) {
     mem_file *file = (mem_file *) fd;
 
     byte *data = NULL;
